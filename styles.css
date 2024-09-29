@@ -1,0 +1,100 @@
+/* Variabel untuk tema terang (default) */
+:root {
+  --background-image: url('background-light.jpg');
+  --background-color: #fafafa;
+  --text-color: #000;
+  --link-bg-color: #eee;
+  --link-hover-bg-color: #ccc;
+}
+
+/* Variabel untuk tema gelap */
+body[data-theme='dark'] {
+  --background-image: url('background-dark.jpg');
+  --background-color: #000;
+  --text-color: #fff;
+  --link-bg-color: #333;
+  --link-hover-bg-color: #555;
+}
+
+/* Style umum untuk body */
+body {
+  background-image: var(--background-image);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: var(--background-color); /* Warna background cadangan */
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease, background-image 0.3s ease;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container untuk konten */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Style untuk jam */
+.clock {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+/* Profil pengguna */
+.profile {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* Style untuk link navigasi */
+.links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.links a {
+  background-color: var(--link-bg-color);
+  color: var(--text-color);
+  padding: 10px;
+  margin: 5px 0;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.links a:hover {
+  background-color: var(--link-hover-bg-color);
+}
+
+/* Tombol untuk mengubah tema */
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: var(--link-bg-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: var(--link-hover-bg-color);
+}
